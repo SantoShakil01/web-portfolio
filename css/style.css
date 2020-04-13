@@ -3,18 +3,14 @@ body, h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Poppins', sans-serif;
 }
 
-/*=========Hero section=========*/
-.hero-section {
-  background: url("../images/top-banner.png");
-  background-repeat: no-repeat;
-  padding: 50px 0px;
+.hero-section .hero-content p, .dream-area .dream-content p {
+  color: dimgray;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 300;
 }
 
-.hero-section .hero-content {
-  padding-top: 20px;
-}
-
-.hero-section .hero-content h2 {
+.hero-section .hero-content h2, .dream-area .dream-content h2 {
   font-size: 40px;
   font-weight: 600;
   line-height: 50px;
@@ -22,12 +18,12 @@ body, h1, h2, h3, h4, h5, h6, p, a {
   margin-bottom: 15px;
 }
 
-.hero-section .hero-content h2 span {
+.hero-section .hero-content h2 span, .dream-area .dream-content h2 span {
   color: orange;
   text-transform: uppercase;
 }
 
-.hero-section .hero-content h5 {
+.hero-section .hero-content h5, .dream-area .dream-content h5 {
   font-size: 20px;
   line-height: 30px;
   color: #000;
@@ -35,13 +31,7 @@ body, h1, h2, h3, h4, h5, h6, p, a {
   margin-top: 50px;
 }
 
-.hero-section .hero-content p {
-  font-size: 14px;
-  line-height: 25px;
-  font-weight: 300;
-}
-
-.hero-section .hero-content a.cs-btn {
+.hero-section .hero-content a.cs-btn, .dream-area .dream-content a.cs-btn {
   text-decoration: none;
   font-size: 15px;
   text-transform: uppercase;
@@ -57,13 +47,43 @@ body, h1, h2, h3, h4, h5, h6, p, a {
   padding: 5px 30px;
 }
 
-.hero-section .hero-content a.cs-btn:hover {
+.hero-section .hero-content a.cs-btn:hover, .dream-area .dream-content a.cs-btn:hover {
   color: orange;
   background: #fff;
+}
+
+/*=========Hero section=========*/
+.hero-section {
+  background: url("../images/top-banner.png");
+  background-repeat: no-repeat;
+  padding: 50px 0px;
+}
+
+.hero-section .hero-content {
+  padding-top: 20px;
 }
 
 .hero-section .hero-image img {
   max-width: 90%;
   margin: 0 auto;
   display: block;
+}
+
+/*=============== Dream Area ==============*/
+.dream-area {
+  background: url("../images/dream-bg.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding: 50px 0px;
+  padding-top: 100px;
+}
+
+.dream-area .dream-image img {
+  max-width: 90%;
+  margin: 0 auto;
+  display: block;
+}
+
+.dream-area .dream-content {
+  padding-top: 20px;
 }

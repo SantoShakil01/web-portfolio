@@ -1,59 +1,83 @@
+// colors
 $primary_color: orange;
+
+// section-padding
+@mixin cs-pading {
+    padding: 50px 0px;
+}
+
+
 
 /*======== Global CSS========*/
 body, h1, h2, h3, h4, h5, h6, p, a{
     font-family: 'Poppins', sans-serif;
 }
 
+%p{
+    color: dimgray;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 300;
+}
+
+%h2{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    span{
+        color: $primary_color;
+        text-transform: uppercase;
+    }
+}
+
+%h5{
+    font-size: 20px;
+    line-height: 30px;
+    color: #000;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+// custom-btn
+%cs-btn{
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid $primary_color;
+    transition: 0.6s;
+    background-image: linear-gradient(45deg, lightSalmon, tomato);
+    padding: 5px 30px;
+    &:hover{
+        color: $primary_color;
+        background: #fff;
+    }
+}
 /*=========Hero section=========*/
 .hero-section{
     background: url('../images/top-banner.png');
     // background-size: cover;
     background-repeat: no-repeat;
-    padding: 50px 0px;
+    @include cs-pading;
     // max-height: 600px;
 
     .hero-content{
         padding-top: 20px;
         h2{
-            font-size: 40px;
-            font-weight: 600;
-            line-height: 50px;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-            span{
-                color: $primary_color;
-                text-transform: uppercase;
-            }
+            @extend %h2;
         }
-
         h5{
-            font-size: 20px;
-            line-height: 30px;
-            color: #000;
-            font-weight: bold;
-            margin-top: 50px;
+            @extend %h5;
         }
         p{
-            font-size: 14px;
-            line-height: 25px;
-            font-weight: 300;
+            @extend %p;
         }
 
         a.cs-btn{
-            text-decoration: none;
-            font-size: 15px;
-            text-transform: uppercase;
-            color: #fff;
-            border-radius: 3px;
-            border: 1px solid $primary_color;
-            transition: 0.6s;
-            background-image: linear-gradient(45deg, lightSalmon, tomato);
-            padding: 5px 30px;
-            &:hover{
-                color: $primary_color;
-                background: #fff;
-            }
+            @extend %cs-btn;
         }
     }
 
@@ -66,3 +90,37 @@ body, h1, h2, h3, h4, h5, h6, p, a{
     }
 }
 
+
+
+
+/*=============== Dream Area ==============*/
+.dream-area {
+    background: url('../images/dream-bg.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    @include cs-pading;
+    padding-top: 100px;
+
+    .dream-image{
+        img{
+            max-width: 90%;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    .dream-content{
+        padding-top: 20px;
+        h2{
+            @extend %h2;
+        }
+        h5{
+            @extend %h5;
+        }
+        p{
+            @extend %p;
+        }
+        a.cs-btn{
+            @extend %cs-btn;
+        }
+    }
+}
