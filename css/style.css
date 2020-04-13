@@ -10,7 +10,7 @@ body, h1, h2, h3, h4, h5, h6, p, a {
   font-weight: 300;
 }
 
-.hero-section .hero-content h2, .dream-area .dream-content h2 {
+.hero-section .hero-content h2, .dream-area .dream-content h2, .experiences-area .experiences-title h2 {
   font-size: 40px;
   font-weight: 600;
   line-height: 50px;
@@ -18,12 +18,12 @@ body, h1, h2, h3, h4, h5, h6, p, a {
   margin-bottom: 15px;
 }
 
-.hero-section .hero-content h2 span, .dream-area .dream-content h2 span {
+.hero-section .hero-content h2 span, .dream-area .dream-content h2 span, .experiences-area .experiences-title h2 span {
   color: orange;
   text-transform: uppercase;
 }
 
-.hero-section .hero-content h5, .dream-area .dream-content h5 {
+.hero-section .hero-content h5, .dream-area .dream-content h5, .experiences-area .experiences-content .single-experience h5 {
   font-size: 20px;
   line-height: 30px;
   color: #000;
@@ -56,7 +56,7 @@ body, h1, h2, h3, h4, h5, h6, p, a {
 .hero-section {
   background: url("../images/top-banner.png");
   background-repeat: no-repeat;
-  padding: 50px 0px;
+  padding: 50px 0px 80px 0px;
 }
 
 .hero-section .hero-content {
@@ -74,8 +74,7 @@ body, h1, h2, h3, h4, h5, h6, p, a {
   background: url("../images/dream-bg.png");
   background-repeat: no-repeat;
   background-position: right;
-  padding: 50px 0px;
-  padding-top: 100px;
+  padding: 50px 0px 80px 0px;
 }
 
 .dream-area .dream-image img {
@@ -86,4 +85,55 @@ body, h1, h2, h3, h4, h5, h6, p, a {
 
 .dream-area .dream-content {
   padding-top: 20px;
+}
+
+/*=============== Experiences Area ==============*/
+.experiences-area {
+  background: url("../images/exp-bg.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  padding: 50px 0px 80px 0px;
+}
+
+.experiences-area .container-fluid {
+  width: 92%;
+}
+
+.experiences-area .experiences-content .single-experience {
+  -webkit-box-shadow: 10px 10px 40px gray;
+  box-shadow: 10px 10px 40px gray;
+  border-radius: 5px;
+  padding: 30px;
+  height: 300px;
+}
+
+.experiences-area .experiences-content .single-experience h4 {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 35px;
+}
+
+.experiences-area .experiences-content .single-experience h5 {
+  color: orange;
+  margin-top: 20px;
+}
+
+.experiences-area .experiences-content .experience-one {
+  border-left: 6px solid;
+  -webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(lightSalmon), to(tomato));
+  -webkit-border-image: -webkit-linear-gradient(top, lightSalmon, tomato);
+  -o-border-image: -o-linear-gradient(top, lightSalmon, tomato);
+  border-image: -webkit-gradient(linear, left top, left bottom, from(lightSalmon), to(tomato));
+  border-image: linear-gradient(180deg, lightSalmon, tomato);
+  border-image-slice: 1;
+}
+
+.experiences-area .experiences-content .experience-two {
+  border-left: 6px solid;
+  -webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(blue), to(cyan));
+  -webkit-border-image: -webkit-linear-gradient(top, blue, cyan);
+  -o-border-image: -o-linear-gradient(top, blue, cyan);
+  border-image: -webkit-gradient(linear, left top, left bottom, from(blue), to(cyan));
+  border-image: linear-gradient(180deg, blue, cyan);
+  border-image-slice: 1;
 }
